@@ -1,0 +1,20 @@
+=== NSL Recognition System - Training Log ===
+Author: Bibek
+Date: July 28, 2026
+
+Model: MobileNetV2
+Dataset: NSL23 (36 classes)
+Training Status: In Progress
+
+Phase 1 (Frozen Base):
+- Learning Rate: 0.001
+- Epochs: 15
+- Status: Completed
+
+Phase 2 (Fine-Tuning):
+- Learning Rate: 0.0001
+- Epochs: 10
+- Status: Skipped
+
+Best Epoch: 14
+Best Validation Accuracy: 99.9167%
