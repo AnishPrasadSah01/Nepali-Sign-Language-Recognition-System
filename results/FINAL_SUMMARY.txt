@@ -1,0 +1,16 @@
+
+NSL RECOGNITION MODEL - FINAL SUMMARY
+=====================================
+Accuracy: 99.9167%
+Classes: 36
+Training Samples: 28,800
+Validation Samples: 7,200
+Best Epoch: 14
+Total Epochs: 15
+Model: MobileNetV2
+Dataset: NSL23
+Improvement over Published: +9.47%
+
+Team: Anish, Ichingsha, Bibek, Alex
+Course: ITS69204 - Computer Vision & NLP
+Date: 2026-07-26 22:15:17
