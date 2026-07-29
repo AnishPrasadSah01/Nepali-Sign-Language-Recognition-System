@@ -141,7 +141,7 @@ NSL_CLASSES = [
 ]
 
 # ============================================================
-# LOAD MODELS
+# LOAD MODELS (FIXED)
 # ============================================================
 
 @st.cache_resource
@@ -179,6 +179,21 @@ def load_models():
                 continue
     
     return models
+
+# ============================================================
+# TTS FUNCTION (MOVED OUTSIDE load_models)
+# ============================================================
+
+def text_to_speech(text, lang='ne'):
+    """Convert text to speech using gTTS"""
+    try:
+        tts = gTTS(text=text, lang=lang, slow=False)
+        audio_bytes = BytesIO()
+        tts.write_to_fp(audio_bytes)
+        audio_bytes.seek(0)
+        return audio_bytes.read()
+    except Exception as e:
+        return None
 
 # Load models
 with st.spinner("Loading models..."):
@@ -269,17 +284,6 @@ def predict_lstm(frame, model, threshold=0.7):
             return "Low Confidence", confidence
     except Exception as e:
         return "Error", 0.0
-
-def text_to_speech(text, lang='ne'):
-    """Convert text to speech using gTTS"""
-    try:
-        tts = gTTS(text=text, lang=lang, slow=False)
-        audio_bytes = BytesIO()
-        tts.write_to_fp(audio_bytes)
-        audio_bytes.seek(0)
-        return audio_bytes.read()
-    except Exception as e:
-        return None
 
 # ============================================================
 # HEADER
