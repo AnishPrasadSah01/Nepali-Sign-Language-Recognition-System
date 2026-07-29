@@ -1,0 +1,16 @@
+
+{
+    "model": "MobileNetV2",
+    "accuracy": 99.9167,
+    "precision": 0.9992,
+    "recall": 0.9992,
+    "f1_score": 0.9992,
+    "classes": 36,
+    "training_samples": 28800,
+    "validation_samples": 7200,
+    "best_epoch": 14,
+    "training_time": "~5 hours",
+    "framework": "TensorFlow 2.15.0",
+    "dataset": "NSL23",
+    "improvement_over_published": "+9.47%"
+}
