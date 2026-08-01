@@ -1,0 +1,10 @@
+{
+  "model": "MobileNetV2",
+  "accuracy": 99.9167,
+  "precision": 99.92,
+  "recall": 99.92,
+  "f1_score": 99.92,
+  "validation_samples": 7200,
+  "best_epoch": 14,
+  "total_epochs": 15
+}
